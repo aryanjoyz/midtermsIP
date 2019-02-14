@@ -11,23 +11,23 @@ public class MyFrame extends JFrame implements KeyListener{
 	}
 
 	public void keyPressed(KeyEvent e){
-		if(e.getKeyCode() == KeyEvent.VK_UP){
+		if(e.getKeyCode() == KeyEvent.VK_UP || e.getKeyCode() == KeyEvent.VK_W){
 			drawing.moveUp();
 			System.out.println("pos: " + drawing.x + ", " + drawing.y);
 		}
-		else if(e.getKeyCode() == KeyEvent.VK_RIGHT){
+		else if(e.getKeyCode() == KeyEvent.VK_RIGHT || e.getKeyCode() == KeyEvent.VK_D){
 			drawing.moveRight();
 			System.out.println("pos: " + drawing.x + ", " + drawing.y);
 		}
-		else if(e.getKeyCode() == KeyEvent.VK_DOWN){
+		else if(e.getKeyCode() == KeyEvent.VK_DOWN || e.getKeyCode() == KeyEvent.VK_S){
 			drawing.moveDown();
 			System.out.println("pos: " + drawing.x + ", " + drawing.y);
 		}
-		else if(e.getKeyCode() == KeyEvent.VK_LEFT){
+		else if(e.getKeyCode() == KeyEvent.VK_LEFT || e.getKeyCode() == KeyEvent.VK_A){
 			drawing.moveLeft();
 			System.out.println("pos: " + drawing.x + ", " + drawing.y);
 		}
-		else if(e.getKeyCode() == KeyEvent.VK_SPACE){
+		else if(e.getKeyCode() == KeyEvent.VK_SPACE || e.getKeyCode() == KeyEvent.VK_SHIFT){
 			drawing.attack();
 			System.out.println("attack");
 		}
